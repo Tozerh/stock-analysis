@@ -23,14 +23,16 @@ The refactored code was much faster than the original VBA code for both the 2017
 
 The nested for loop in the original code: 
 
-'''''
- For i = 0 To 11
-        Ticker = tickers(i)
-        totalVolume = 0
-        Worksheets(yearValue).Activate
+'''
+   For i = 0 To 11
+            Ticker = tickers(i)
+            totalVolume = 0
+            Worksheets(yearValue).Activate
           
-            For k = 2 To RowCount         
-'''''
+                For k = 2 To RowCount
+'''
+
+required that 
 
 ### Believe or not, more subheader 
 
