@@ -37,13 +37,34 @@ The nested for loop in the original code,
 
 , requires that the entire for loop be executed twelve times, once for each index in the array from 0 to 11. The code is very clear and the nested loop is tidy, but ultimately the refactored code is much faster. 
 
-Here are screenshots comparing first the 2017 original and refactored code, and then the 2018 code: 
+Here are screenshots comparing the runtime of the 2017 original and refactored code:
 
 ![2017 Original Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Original%20time%20for%202017%20Analysis.PNG)
 
-![2017 Refactored Time] (https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Refactored%20time%20for%202017%20Analysis.PNG)
+![2017 Refactored Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/VBA_Challenge_2017.PNG)
   
+
+And here are the 2018 original and refactored screenshots with runtime: 
+
+![2018 Original Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Original%20time%20for%202018%20Analysis.PNG)
+
+![2018 Refactored Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/VBA_Challenge_2018.PNG)
+
+Refactoring the 2017 code resulted in an 86% decrease in runtime, and the 2018 refactoring resulted in an 84% decrease in runtime for the macro. So...what exactly accounts for such an increase in efficiency? In the case of refactoring this VBA code, the answer is in the use arrays to only require the code to run once through the source data in order to store our output values for stock ticker name, volume, starting price, and ending price. In the refactored code, the array to store stock ticker names is the same as the original code, so I will be focusing on volume, starting price, and ending price below. 
+
+I first had to declare these new output arrays: 
+
+'''
+    ReDim tickerVolumes(12) As Long
+    ReDim tickerStartingPrices(12) As Single
+    ReDim tickerEndingPrices(12) As Single
+'''
+
 
 ## Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of refactoring code?
+
+Group logically related data together – let’s say you want to store a list of students. You can use a single array variable that has separate locations for student categories i.e. kinder garden, primary, secondary, high school, etc.
+Arrays make it easy to write maintainable code. For the same logically related data, it allows you to define a single variable, instead of defining more than one variable.
+Better performance – once an array has been defined, it is faster to retrieve, sort, and modify data.
 How do these pros and cons apply to refactoring the original VBA script?
