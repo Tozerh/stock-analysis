@@ -1,7 +1,7 @@
 # Module 2 Challenge
 # Refactoring VBA Code for Stocks Analysis
 
-## Overview of Project: The stated goal for this challenge is to most efficiently capture stock ticker data for our client, allowing him to recommend the best stok or basket of stocks for investment. The underpinning idea of this project is to reformat existing code evaluating these stock tickers in an effort to make improvements on the efficiency of the code. The initial stock ticker analysis macro had to run through all rows and columns of the stock data many times and the goal for our refactored code was to require only one pass through the data set, using arrays to store our eventual output values. 
+## Overview of Project: The stated goal for this challenge is to most efficiently capture stock ticker data for our client, allowing him to recommend the best stock or basket of stocks for investment. The underpinning idea of this project is to reformat existing code evaluating these stock tickers in an effort to make improvements on the efficiency of the code. The initial stock ticker analysis macro had to run through all rows and columns of the stock data many times and the goal for our refactored code was to require only one pass through the data set, using arrays to store our eventual output values. 
 
  
 
