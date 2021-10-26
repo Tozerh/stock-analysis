@@ -7,7 +7,8 @@
 
 ## Results: Using images and examples of your code, compare the stock performance between 2017 and 2018, as well as the execution times of the original script and the refactored script.
 
-### Stock Performance Comparison: 2017 vs. 2018
+### 
+Stock Performance Comparison: 2017 vs. 2018
 
 Overall, these twelve stocks performed much better in 2017 than in 2018. The average annual return for this group of stocks in 2017 was about 67%, while the average annual return for this group of stocks in 2018 was -8.51%. 
 
@@ -36,7 +37,11 @@ The nested for loop in the original code,
 
 , requires that the entire for loop be executed twelve times, once for each index in the array from 0 to 11. The code is very clear and the nested loop is tidy, but ultimately the refactored code is much faster. 
 
+Here are screenshots comparing first the 2017 original and refactored code, and then the 2018 code: 
 
+![2017 Original Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Original%20time%20for%202017%20Analysis.PNG)
+
+![2017 Refactored Time] (https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Refactored%20time%20for%202017%20Analysis.PNG)
   
 
 ## Summary: In a summary statement, address the following questions.
