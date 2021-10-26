@@ -23,7 +23,7 @@ As we can see here, only one stock "RUN" posted an overall annual return in 2018
 The refactored code was much faster than the original VBA code for both the 2017 and 2018 datasets. The difference lies in the use of arrays to store values as the code runs through each stock ticker. 
 
 The nested for loop in the original code,
-
+```VBA
 
         For i = 0 To 11
             Ticker = tickers(i)
@@ -33,7 +33,8 @@ The nested for loop in the original code,
                 For k = 2 To RowCount
             
                 If Cells(k, 1).Value = Ticker Then ...
-                
+
+```
 
 , requires that the entire for loop be executed twelve times, once for each index in the array from 0 to 11. The code is very clear and the nested loop is tidy, but ultimately the refactored code is much faster. 
 
@@ -54,12 +55,12 @@ Refactoring the 2017 code resulted in an 86% decrease in runtime, and the 2018 r
 
 I first had to declare these new output arrays: 
 
-'''
+```VBA
     ReDim tickerVolumes(12) As Long
     ReDim tickerStartingPrices(12) As Single
     ReDim tickerEndingPrices(12) As Single
-'''
 
+```
 
 ## Summary: In a summary statement, address the following questions.
 What are the advantages or disadvantages of refactoring code?
