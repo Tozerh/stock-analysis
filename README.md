@@ -21,20 +21,20 @@ As we can see here, only one stock "RUN" posted an overall annual return in 2018
 
 The refactored code was much faster than the original VBA code for both the 2017 and 2018 datasets. The difference lies in the use of arrays to store values as the code runs through each stock ticker. 
 
-The nested for loop in the original code: 
+The nested for loop in the original code,
 
-'''
-   For i = 0 To 11
+
+        For i = 0 To 11
             Ticker = tickers(i)
             totalVolume = 0
             Worksheets(yearValue).Activate
           
                 For k = 2 To RowCount
-'''
+            
+                If Cells(k, 1).Value = Ticker Then ...
+                
 
-required that 
-
-### Believe or not, more subheader 
+, requires that the entire for loop be executed twelve times, once for each index in the array from 0 to 11. The code is very clear and the nested loop is tidy, but ultimately the refactored code is much faster. 
 
 
   
