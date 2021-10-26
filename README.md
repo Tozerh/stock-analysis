@@ -16,7 +16,7 @@ Here is a bar graph showing the annual return for each stock in 2017 and 2018:
 
 ![Stock Ticker Returns: 2017 vs. 2018](https://github.com/Tozerh/stocks-analysis/blob/main/17%20vs%2018%20Comparison.PNG)
 
-As we can see here, only one stock "RUN" posted an overall annual return in 2018 that surpassed its number for 2017 while remaining positive both years. Another ticker of note is "FLSR," performing worse in 2017 in terms of its annual return, while its returns for both years remained positive. Outside of these two tickers, the other ten all saw negative returns in 2018, indicating a tough year for this particular basket of stocks. A small bright spot might be TERP, whose returns, while negative for both 2017 and 2018, posted less of a loss in 2018, indicating a possible turnaround. 
+As we can see here, only one stock "RUN" posted an overall annual return in 2018 that surpassed its number for 2017 while remaining positive both years. Another ticker of note is "ENPH," performing worse in 2017 in terms of its annual return, while its returns for both years remained positive. Outside of these two tickers, the other ten all saw negative returns in 2018, indicating a tough year for this particular basket of stocks. A small bright spot might be TERP, whose returns, while negative for both 2017 and 2018, posted less of a loss in 2018, indicating a possible turnaround. 
  
 ### Execution Times
 
@@ -97,13 +97,28 @@ Here is a screenshot of the final product for the 2018 data:
 
 ![2018 Refactored Code with NumberFormat Changes](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/Module%202.5.3%20-%20Refactored%20time%20for%202018%20Analysis%20-%20With%20NumberFormat%20color%20coding.PNG)
 
-The increa
+The increase in efficiency using this method is about 20% compared to using the conditional formatting in the refactored code. 
 
 
 ## Summary: In a summary statement, address the following questions.
-What are the advantages or disadvantages of refactoring code?
+*What are the advantages or disadvantages of refactoring code?*
 
-Group logically related data together – let’s say you want to store a list of students. You can use a single array variable that has separate locations for student categories i.e. kinder garden, primary, secondary, high school, etc.
-Arrays make it easy to write maintainable code. For the same logically related data, it allows you to define a single variable, instead of defining more than one variable.
-Better performance – once an array has been defined, it is faster to retrieve, sort, and modify data.
-How do these pros and cons apply to refactoring the original VBA script?
+1) Advantages
+    - Refactored code can be more efficient, especially if the code eliminates repetition, as in the case of the output arrays we used for this challenge. 
+    - Refactored code should be more easily maintained, and changes to refactored code should be able to be made in less time. 
+    - Refactored code should also be more compact with fewer lines, making it, if commented correctly, more readable and easier to port to other projects. 
+
+2) Disadvantages: 
+    - Refactoring code can create problems and introduce bugs that were not there in the original code. 
+    - Refactoring code isn't going to change the function of the code, so if the genesis of the problem is with the larger idea of what the code should be doing or the overall structure of the code, then refactoring will not likely remedy these concerns.  
+
+
+*How do these pros and cons apply to refactoring the original VBA script?*
+1) Pros
+    - The refactored VBA code that I created for this module was definitely more efficient, as seen in the runtime screenshots above. 
+    - The refactored VBA code is also able to create the same output in fewer lines, especially if adopting the `NumberFormat` changes described above. 
+    - Refactoring this code gave me a taste of what debugging code looks like after I made a mess of the original idea behind the refactoring. 
+
+2) Cons
+    - In my case, refactoring this code required a lot of testing and revising for my new `for` loops. I had originally nested my `for` loops in the refactored code, which   caused an overflow error, as my `tickerIndex` exceeded the parameters defined for my arrays. In refactoring the code, I had to take a step back and ask if the overall structure of the code made sense. Even though I had typed out code that seemed to do the same thing as my original code in fewer lines, something was clearly wrong with the bigger picture and I must have introduced a bug or two given what was happening when I tried to run the macro. 
+    
