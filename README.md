@@ -19,9 +19,18 @@ As we can see here, only one stock "RUN" posted an overall annual return in 2018
  
 ### Execution Times
 
+The refactored code was much faster than the original VBA code for both the 2017 and 2018 datasets. The difference lies in the use of arrays to store values as the code runs through each stock ticker. 
 
+The nested for loop in the original code: 
 
-
+'''''
+ For i = 0 To 11
+        Ticker = tickers(i)
+        totalVolume = 0
+        Worksheets(yearValue).Activate
+          
+            For k = 2 To RowCount         
+'''''
 
 ### Believe or not, more subheader 
 
