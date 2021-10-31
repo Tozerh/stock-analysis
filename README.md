@@ -51,7 +51,7 @@ And here are the screenshots of the 2018 original and refactored macros with run
 
 ![2018 Refactored Time](https://github.com/Tozerh/stocks-analysis/blob/main/Resources/VBA_Challenge_2018.PNG)
 
-Refactoring the 2017 code resulted in an 86% decrease in runtime, and the 2018 refactoring resulted in an 84% decrease in runtime for the macro. What exactly accounts for such an increase in efficiency? In the case of refactoring this VBA code, the answer is in the use arrays to only require the code to run once through the source data in order to store our output values for stock ticker name, volume, starting price, and ending price. (In the refactored code, the array to store stock ticker names is the same as the original code, so I will be focusing on volume, starting price, and ending price below.)
+Refactoring the 2017 code resulted in an 86% decrease in runtime, and the 2018 refactoring resulted in an 84% decrease in runtime for the macro. What exactly accounts for such an increase in efficiency? In the case of refactoring this VBA code, the answer is in the use arrays to only require the code to run once through the source data in order to store our output values for each stock ticker name, volume, starting price, and ending price. (In the refactored code, the array to store stock ticker names is the same as the original code, so I will be focusing on volume, starting prices, and ending prices arrays below.)
 
 I first had to declare these new output arrays: 
 
@@ -103,22 +103,14 @@ The increase in efficiency using this method is about 20% compared to using the 
 ## Summary: In a summary statement, address the following questions.
 *What are the advantages or disadvantages of refactoring code?*
 
-1) Advantages
-    - Refactored code can be more efficient, especially if the code eliminates repetition, as in the case of the output arrays we used for this challenge. 
-    - Refactored code should be more easily maintained, and changes to refactored code should be able to be made in less time. 
-    - Refactored code should also be more compact with fewer lines, making it, if commented correctly, more readable and easier to port to other projects. 
+ In terms of advantages, refactored code can be more efficient, especially if the code eliminates repetition, as in the case of the output arrays we used for this challenge. Further, refactored code should be more easily maintained, and changes to refactored code should be able to be made in less time. Additionally, refactored code should also be more compact with fewer lines, making it, if commented correctly, more readable and easier to port to other projects. 
 
-2) Disadvantages: 
-    - Refactoring code can create problems and introduce bugs that were not there in the original code. 
-    - Refactoring code isn't going to change the function of the code, so if the genesis of the problem is with the larger idea of what the code should be doing or the overall structure of the code, then refactoring will not likely remedy these concerns.  
+ Though refactoring can be advantageous, it can also create a few diffculties for us. By refactoring code, we could inadvertently  introduce bugs that were not there in the original code. Also, most importantly, refactoring code isn't going to change the function of the code. If the genesis of the problem is with the larger idea of what the code should be doing or the overall structure of the code, then refactoring will not likely remedy these concerns.  
 
 
 *How do these pros and cons apply to refactoring the original VBA script?*
-1) Pros
-    - The refactored VBA code that I created for this module was definitely more efficient, as seen in the runtime screenshots above. 
-    - The refactored VBA code is also able to create the same output in fewer lines, especially if adopting the `NumberFormat` changes described above. 
-    - Refactoring this code gave me a taste of what debugging code looks like after I made a mess of the original idea behind the refactoring. 
-
-2) Cons
-    - In my case, refactoring this code required a lot of testing and revising for my new `for` loops. I had originally nested my `for` loops in the refactored code, which   caused an overflow error, as my `tickerIndex` exceeded the parameters defined for my arrays. In refactoring the code, I had to take a step back and ask if the overall structure of the code made sense. Even though I had typed out code that seemed to do the same thing as my original code in fewer lines, something was clearly wrong with the bigger picture and I must have introduced a bug or two given what was happening when I tried to run the macro. 
+ 
+ 
+ For refactoring the original VBA code, the resulting code that I created for this module was definitely more efficient, as seen in the runtime screenshots above. Also a positive, the refactored VBA code is able to create the same output in fewer lines, especially if adopting the `NumberFormat` changes described above. Refactoring this code also gave me a taste of what debugging code looks like after I made a mess of the original idea behind the refactoring. 
+ In my case, refactoring this code required a lot of testing and revising for my new `for` loops. I had originally nested my `for` loops in the refactored code, which caused an overflow error, as my `tickerIndex` exceeded the parameters defined for my arrays. In refactoring the code, I had to take a step back and ask if the overall structure of the code made sense. Even though I had typed out code that seemed to do the same thing as my original code in fewer lines, something was clearly wrong with the bigger picture. I realized that I must have introduced a bug or two given what was happening when I tried to run the macro, and was able to identify the  
     
